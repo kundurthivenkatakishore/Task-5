@@ -72,6 +72,7 @@ code:
 
 output:
         [3,7,11,17,67,83]
+        
 e)Return all the palindromes in an array
 
 code:
@@ -101,12 +102,11 @@ code:
             }
         }
     }
+    PrintPalindrome(['malayalam',1344,12321,'did','cannot'])
 
 output:
         [malayalam,12321,did]
-
-
-PrintPalindrome(['malayalam',1344,12321,'did','cannot'])
+        
 f)Return median of two sorted arrays of same size
 
 code:
@@ -208,3 +208,65 @@ code:
             console.log(sum);
         }
         SumofArray([15,34,50,76,12]);
+        
+output:
+    `187
+ 
+ d)Return all the prime numbers in an array
+
+code:
+    const PrintPrime=(arr)=>{
+        for(let i=0;i<arr.length;i++)
+        {
+            let flag=0;
+            for(let j=2;j<arr[i];j++)
+            {
+                if(arr[i]%j==0)
+                {
+                    flag=1;
+                    break;
+                }
+            }
+            if(flag==0)
+            {
+                console.log(arr[i]);
+            }
+        }
+    }
+    PrintPrime([10,11,12,13,14,15,16,17,18,19]);
+
+output:
+        11,13,17,19
+
+e)Return all the palindromes in an array
+
+code:
+        const PrintPalindrome=(arr)=>{
+            for(let k=0;k<arr.length;k++)
+            {
+                let flag=0;
+                let str=String(arr[k]);
+                let i=0;
+                let j=str.length-1;
+                while(i<j)
+                {
+                    if(str[i]===str[j])
+                    {
+                        i++;
+                        j--;
+                    }
+                    else{
+                        flag=1;
+                        break;
+                    }
+                }
+                if(flag==0)
+                {
+                    console.log(arr[k]);
+                }
+            }
+        }
+        PrintPalindrome(['malayalam',1344,12321,143341,'bcaacb','did','cannot'])
+
+output:
+        malayalam,12321,143341,bcaacb,did
