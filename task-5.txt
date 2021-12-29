@@ -441,3 +441,42 @@ code:
 
 output:
         malayalam,12321,143341,bcaacb,did
+        
+g)Remove duplicates from an array
+
+code:
+    let getUnique=(arr)=>{   
+    let uniqueArr = [];
+    for(let i of arr){
+        if(uniqueArr.indexOf(i) === -1){
+            uniqueArr.push(i);
+        }
+    }
+    console.log(uniqueArr);
+    })
+    getUnique([1,2,3,4,3,"k","j",2,8,7,"j",7]);
+
+output:
+        [1, 2, 3, 4, 'k', 'j', 8, 7]
+        
+h)Rotate an array by k times
+
+code:
+    let rotateArray=(a, n, k)=>{
+        k=k%n;
+        for(let i=0;i<n;i++){
+            if(i<k){
+                console.log(a[n+i-k]+" ");
+            }
+            else{
+                console.log((a[i-k])+" ");
+            }
+        }
+    })
+    let N=Array.length;
+    let K=2;
+    rotateArray([1,2,3,4,5], N, K);
+
+output:
+        4,5,1,2,3
+ 
